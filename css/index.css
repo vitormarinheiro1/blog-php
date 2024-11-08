@@ -1,0 +1,187 @@
+html, body {
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    font-family: 'Poppins', sans-serif; /* Definindo a fonte global */
+    background-color: #f4f4f4;
+    flex-direction: column;
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 50px;
+    width: 100%; /* Garante que o header ocupe toda a largura disponível */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+}
+
+/* Estilo do ul */
+ul {
+    display: flex; /* Flex para alinhar os itens horizontalmente */
+    gap: 15px; /* Espaçamento entre os itens */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+}
+
+/* Estilo dos itens da lista */
+ul li {
+    list-style: none; /* Remove o marcador padrão */
+}
+
+/* Estilo do logo */
+header div {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Estilo do contêiner de posts */
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os posts "quebrem" para a próxima linha */
+    justify-content: space-between;  /* Espaçamento entre os posts */
+    gap: 20px;  /* Espaçamento entre os posts */
+    width: 100%;  /* Largura do contêiner */
+    max-width: 1200px;  /* Largura máxima */
+    margin-top: 20px;  /* Espaçamento superior */
+}
+
+/* Estilo para os posts */
+.posts {
+    border-radius: 4px;
+    text-align: left;
+    width: 30%;  /* Cada post ocupará 30% da largura, resultando em 3 posts por linha */
+    box-sizing: border-box; /* Certifica-se que o padding não afete a largura */
+}
+
+/* Título do post */
+.titulo {
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    margin-top: 0.75rem;
+}
+
+/* Conteúdo e autor do post */
+.autor {
+    font-size: 12px;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Ajuste para a classe .img */
+.posts .img {
+    width: 100%;  /* Garantir que a imagem ocupe toda a largura do post */
+    height: 200px;  /* Ajuste a altura conforme necessário */
+    object-fit: cover;  /* Garante que a imagem se encaixe sem distorcer */
+    border-radius: 4px;  /* (Opcional) Adiciona bordas arredondadas à imagem */
+}
+
+/* Estilização do rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 30px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.social-links li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+/* Consultas de mídia (media queries) para responsividade */
+
+/* Quando a tela for menor que 1024px (telas médias), 2 colunas */
+@media (max-width: 1024px) {
+    .posts {
+        width: 45%;  /* Ajusta a largura dos posts para 45% */
+    }
+}
+
+/* Quando a tela for menor que 768px (telas pequenas), 1 coluna */
+@media (max-width: 768px) {
+    .posts {
+        width: 100%;  /* Ajusta a largura dos posts para 100% */
+    }
+}
